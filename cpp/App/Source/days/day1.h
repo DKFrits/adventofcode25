@@ -12,7 +12,7 @@ int day1()
 
 	if (!file)
 	{
-		Error("Failed to open file\n");
+		Error("Failed to open file");
 		return 1;
 	}
 
