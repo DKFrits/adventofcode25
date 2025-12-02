@@ -22,6 +22,4 @@ int main()
 	{
 		std::string_view line { buffer };
 	}
-
-	Log("Answer: {}");
 }

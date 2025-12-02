@@ -4,6 +4,7 @@
 #include <ratio>
 #include <string_view>
 #include <vector>
+#include <ranges>
 
 class Timer
 {
@@ -36,4 +37,21 @@ static std::optional<int> toInt(std::string_view sv)
 long long mod(long long k, long long n)
 {
 	return ((k %= n) < 0) ? k + n : k;
+}
+
+std::vector<std::string_view> split(std::string_view data, std::string_view delimiter)
+{
+	std::vector<std::string_view> result;
+
+	auto range =
+		data | std::views::split(delimiter)
+		| std::views::transform([](auto&& rng)
+			{
+				return std::string_view(rng.data(), rng.size());
+			});
+
+	for (auto sv : range)
+		result.push_back(sv);
+
+	return result;
 }
