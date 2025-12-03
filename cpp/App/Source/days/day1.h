@@ -3,8 +3,6 @@
 #include <fstream>
 #include <iostream>
 #include <string>
-#include <vector>
-#include <cmath>
 
 int day1()
 {
@@ -26,7 +24,7 @@ int day1()
 		std::string_view line { buffer };
 
 		auto direction = line.substr(0, 1);
-		auto value = *toInt(line.substr(1));
+		auto value = *toNumber<int>(line.substr(1));
 
 		auto curr = dial;
 

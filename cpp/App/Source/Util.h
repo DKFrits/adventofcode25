@@ -26,9 +26,10 @@ public:
 	}
 };
 
-static std::optional<int> toInt(std::string_view sv)
+template <typename T>
+static std::optional<T> toNumber(std::string_view sv)
 {
-	int value;
+	T value {};
 	auto [ptr, ec] = std::from_chars(sv.data(), sv.data() + sv.size(), value);
 	if (ec == std::errc()) return value;
 	return std::nullopt;

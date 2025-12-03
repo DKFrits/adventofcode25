@@ -3,12 +3,10 @@
 #include <fstream>
 #include <iostream>
 #include <string>
-#include <vector>
-#include <cmath>
 
 int main()
 {
-	std::ifstream file { "D:/Github/adventofcode25/cpp/App/Source/resources/day2.txt" };
+	std::ifstream file { "D:/Github/adventofcode25/cpp/App/Source/resources/day3.txt" };
 
 	if (!file)
 	{
@@ -21,5 +19,6 @@ int main()
 	while (file.getline(buffer, sizeof(buffer)))
 	{
 		std::string_view line { buffer };
+
 	}
 }

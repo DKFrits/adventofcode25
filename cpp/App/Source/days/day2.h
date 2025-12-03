@@ -3,8 +3,6 @@
 #include <fstream>
 #include <iostream>
 #include <string>
-#include <vector>
-#include <cmath>
 
 int day2()
 {
@@ -40,7 +38,7 @@ int day2()
 
 				long long last {};
 
-				for (int i = 1; i <= max; i++)
+				for (size_t i = 1; i <= max; i++)
 				{
 					int nMatches = 0;
 					auto pattern = nStr.substr(0, i);
@@ -49,7 +47,7 @@ int day2()
 
 					if (canFit)
 					{
-						for (int j = 0; j < patternFitCount; j++)
+						for (size_t j = 0; j < patternFitCount; j++)
 						{
 							if (nStr.substr(j * i, i) == pattern)
 								nMatches += 1;
