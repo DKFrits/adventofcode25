@@ -45,13 +45,13 @@ int day3()
 
 	char buffer[4096];
 	int64_t sum = 0;
+	int nBatteries = 12;
 
 	while (file.getline(buffer, sizeof(buffer)))
 	{
 		std::string nStr {};
 		std::string_view line { buffer };
 
-		int nBatteries = 12;
 		int skipLeftIndex = -1;
 
 		for (size_t i = 0; i < nBatteries; i++)
