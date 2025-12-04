@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Util.h"
 #include "Logger.h"
 #include <fstream>
@@ -6,7 +8,7 @@
 
 int day1()
 {
-	std::ifstream file { "D:/Github/adventofcode25/cpp/App/Source/resources/day1.txt" };
+	std::ifstream file{ "D:/Github/adventofcode25/cpp/App/Source/resources/day1.txt" };
 
 	if (!file)
 	{
@@ -21,7 +23,7 @@ int day1()
 
 	while (file.getline(buffer, sizeof(buffer)))
 	{
-		std::string_view line { buffer };
+		std::string_view line{ buffer };
 
 		auto direction = line.substr(0, 1);
 		auto value = *toNumber<int>(line.substr(1));

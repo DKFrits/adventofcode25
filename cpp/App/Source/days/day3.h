@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Util.h"
 #include "Logger.h"
 #include <fstream>
@@ -35,7 +37,7 @@ static Joltage nextJoltage(std::string_view line, int skipLeftIndex, int i, int 
 
 int day3()
 {
-	std::ifstream file { "D:/Github/adventofcode25/cpp/App/Source/resources/day3.txt" };
+	std::ifstream file{ "D:/Github/adventofcode25/cpp/App/Source/resources/day3.txt" };
 
 	if (!file)
 	{
@@ -49,8 +51,8 @@ int day3()
 
 	while (file.getline(buffer, sizeof(buffer)))
 	{
-		std::string nStr {};
-		std::string_view line { buffer };
+		std::string nStr{};
+		std::string_view line{ buffer };
 
 		int skipLeftIndex = -1;
 

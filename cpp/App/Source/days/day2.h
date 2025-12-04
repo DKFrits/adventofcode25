@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Util.h"
 #include "Logger.h"
 #include <fstream>
@@ -6,7 +8,7 @@
 
 int day2()
 {
-	std::ifstream file { "D:/Github/adventofcode25/cpp/App/Source/resources/day2.txt" };
+	std::ifstream file{ "D:/Github/adventofcode25/cpp/App/Source/resources/day2.txt" };
 
 	if (!file)
 	{
@@ -20,7 +22,7 @@ int day2()
 
 	while (file.getline(buffer, sizeof(buffer)))
 	{
-		std::string_view line { buffer };
+		std::string_view line{ buffer };
 
 		auto ranges = split(line, ",");
 
@@ -36,7 +38,7 @@ int day2()
 				auto nStr = std::to_string(n1);
 				auto max = nStr.size() / 2;
 
-				long long last {};
+				long long last{};
 
 				for (size_t i = 1; i <= max; i++)
 				{
