@@ -80,7 +80,7 @@ int day4()
 				if (grid[x][y] != '@')
 					continue;
 
-				for (auto dir : dirs)
+				for (auto& dir : dirs)
 				{
 					auto offsetX = x + dir.x;
 					auto offsetY = y + dir.y;
