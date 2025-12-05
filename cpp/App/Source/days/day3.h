@@ -64,7 +64,7 @@ int day3()
 			nStr += (char)(joltage.value + '0');
 		}
 
-		int64_t joltageVal = *toNumber<int64_t>(nStr);
+		int64_t joltageVal = *to_number<int64_t>(nStr);
 		sum += joltageVal;
 		Log("{}", joltageVal);
 	}

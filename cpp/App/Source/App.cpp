@@ -4,7 +4,7 @@
 
 int main()
 {
-	std::ifstream file{ "C:/Git/adventofcode25/cpp/App/Source/resources/day4.txt" };
+	std::ifstream file { "C:/Git/adventofcode25/cpp/App/Source/resources/day6.txt" };
 
 	if (!file)
 	{
@@ -16,7 +16,7 @@ int main()
 
 	while (file.getline(buffer, sizeof(buffer)))
 	{
-		std::string_view line{ buffer };
+		std::string_view line { buffer };
 
 	}
 }

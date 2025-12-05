@@ -26,7 +26,7 @@ int day1()
 		std::string_view line{ buffer };
 
 		auto direction = line.substr(0, 1);
-		auto value = *toNumber<int>(line.substr(1));
+		auto value = *to_number<int>(line.substr(1));
 
 		auto curr = dial;
 

@@ -15,7 +15,7 @@ struct Position
 
 int day4()
 {
-	std::ifstream file{ "C:/Git/adventofcode25/cpp/App/Source/resources/day4.txt" };
+	std::ifstream file { "D:/Github/adventofcode25/cpp/App/Source/resources/day4.txt" };
 
 	if (!file)
 	{
@@ -36,7 +36,7 @@ int day4()
 
 	std::vector<std::vector<char>> grid(firstLine.size(), std::vector<char>(firstLine.size()));
 
-	std::array<Position, 8> dirs{ {
+	std::array<Position, 8> dirs { {
 		{-1, -1},
 		{0, -1},
 		{1, -1},
@@ -51,7 +51,7 @@ int day4()
 	while (file.getline(buffer, sizeof(buffer)))
 	{
 		size_t x = 0;
-		std::string_view line{ buffer };
+		std::string_view line { buffer };
 		for (auto c : line)
 		{
 			grid[x][y] = c;
@@ -66,7 +66,8 @@ int day4()
 	std::vector<Position> removeRolls;
 	removeRolls.reserve(1564);
 
-	while (!lastRemoved.has_value() || lastRemoved.value() > 0) {
+	while (!lastRemoved.has_value() || lastRemoved.value() > 0)
+	{
 		lastRemoved = 0;
 		removeRolls.clear();
 

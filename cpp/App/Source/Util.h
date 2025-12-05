@@ -27,7 +27,7 @@ public:
 };
 
 template <typename T>
-static std::optional<T> toNumber(std::string_view sv)
+static std::optional<T> to_number(std::string_view sv)
 {
 	T value {};
 	auto [ptr, ec] = std::from_chars(sv.data(), sv.data() + sv.size(), value);
