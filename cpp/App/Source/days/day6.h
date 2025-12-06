@@ -95,9 +95,7 @@ static std::vector<Calculation> get_calculations(std::ifstream& file)
 			if (c == '+' || c == '*')
 			{
 				if (operation != "")
-				{
 					numbers.push_back(*to_number<int64_t>(operation));
-				}
 
 				o = c;
 
@@ -125,7 +123,7 @@ int day6()
 	}
 
 	auto [operations, n] = get_operations(file);
-	size_t nOperation = operations.size() / n; // 4
+	size_t nOperation = operations.size() / n;
 
 	int64_t total = 0;
 
