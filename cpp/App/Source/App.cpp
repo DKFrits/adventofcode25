@@ -4,7 +4,7 @@
 
 int main()
 {
-	std::ifstream file { "C:/Git/adventofcode25/cpp/App/Source/resources/day6.txt" };
+	std::ifstream file { "D:/Github/adventofcode25/cpp/App/Source/resources/day7.txt" };
 
 	if (!file)
 	{
